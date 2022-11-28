@@ -11,8 +11,7 @@ class Application(Cor):
         self.colorir()
         self.fontes()
         self.add_frames()
-        self.add_widget_frame_1()
-        self.add_widget_frame_2()
+        self.label()
         root.mainloop()
         
     def tela(self):
@@ -53,21 +52,13 @@ class Application(Cor):
         
         return self.labels
     
-    def add_widget_frame_1(self,):
-        # Label titulo
+    def label(self):
         self.label_titulo = self.gerador_de_label(self.frame_2,'gerador de imagens',self.arial_50,'#cfd5e1','red',0.02,0.05,0.80,0.1)
-        self.label_titulo_2 = self.gerador_de_label(self.frame_3,'gerador de imagens',self.arial_50,'#cfd5e1','red',0.02,0.05,0.80,0.1)
-        self.bt = Button(self.frame_2,text='botao').place(relx=0.05,rely=0.05,relwidth=0.10,relheight=0.05)
-        return self.label_titulo, self.label_titulo_2
-    
-    def add_widget_frame_2(self):
         
-        #
-        pass
-    def gerador_de_botoes(self):
-        pass
-    
-    
+  
+        self.label_titulo_2 = self.gerador_de_label(self.frame_3,'gerador de imagens',self.arial_50,'#cfd5e1','red',0.02,0.05,0.80,0.1)
+        self.bt = Button(self.frame_3,text='botao').place(relx=0.05,rely=0.05,relwidth=0.10,relheight=0.05)
+            
     
     
 Application()
